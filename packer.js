@@ -6,7 +6,7 @@ let arrayOfJsfiles = [
     "lib/Insert/inset.js"
 ]
 
-for (const file in arrayOfJsfiles) {
+for (const file of arrayOfJsfiles) {
     let fileread = fs.readFileSync(file)
     data += fileread + "\n"
     console.log(`writing file ${file} is done`);
