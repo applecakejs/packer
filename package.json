@@ -1,0 +1,23 @@
+{
+  "name": "applecakepacker",
+  "version": "1.0.0",
+  "description": "The packer of applecake for creating 1 file from all of applecake files",
+  "main": "packer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/applecakejs/packer.git"
+  },
+  "keywords": [
+    "packer",
+    "applecake"
+  ],
+  "author": "mehan alavimajd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/applecakejs/packer/issues"
+  },
+  "homepage": "https://github.com/applecakejs/packer#readme"
+}
