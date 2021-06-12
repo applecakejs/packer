@@ -20,4 +20,7 @@
     "url": "https://github.com/applecakejs/packer/issues"
   },
   "homepage": "https://github.com/applecakejs/packer#readme"
+  "dependencies": {
+    "chalk": "^4.1.1"
+  }
 }
