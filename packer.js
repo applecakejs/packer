@@ -1,30 +1,20 @@
-{
-  "name": "applecake",
-  "version": "1.0.0-beta",
-  "description": "A JavaScript library to create html elements with js easily",
-  "main": "dist/applecake 1.0.0-alpha.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "exit 0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/applecakejs/applecake.git"
-  },
-  "keywords": [
-    "applecake",
-    "DOM",
-    "render"
-  ],
-  "author": "mehan alavimajd",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/applecakejs/applecake/issues"
-  },
-  "homepage": "https://github.com/applecakejs/applecake#readme",
-  "dependencies": {
-    "chalk": "^4.1.1"
+const fs = require("fs");
+const chalk = require("chalk")
+let data = "";
+
+const Pack = (arrayOfJsfiles , dist , version) => {
+
+  for (const file of arrayOfJsfiles) {
+    let fileread = fs.readFileSync(file);
+    data += fileread + "\n";
+    
+    console.log(chalk.cyanBright(`writing file ${file} is done`));
   }
+  console.log("\n");
+  console.log(chalk.greenBright("everything is done"));
+  fs.writeFileSync(`${dist} ${version}.js`, data);
+};
+
+module.exports = {
+    Pack
 }
