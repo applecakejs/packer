@@ -10,7 +10,7 @@ const Pack = (arrayOfJsfiles , dist , version) => {
   }
   console.log("\n");
   console.log("everything is done");
-  fs.writeFileSync(`${dist}version`, data);
+  fs.writeFileSync(`${dist}${version}`, data);
 };
 
 module.exports = {
