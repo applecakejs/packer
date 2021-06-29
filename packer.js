@@ -11,8 +11,8 @@ const Pack = (arrayOfJsfiles, folderofdist , filenamedist) => {
   }
   console.log("\n");
   console.log(chalk.greenBright("everything is done"));
-  if (!fs.existsSync("./dist")) {
-    fs.mkdirSync("dist");
+  if (!fs.existsSync(folderofdist)) {
+    fs.mkdirSync(folderofdist);
   }
   fs.writeFileSync(`${folderofdist}/${filenamedist}`, data);
 };
