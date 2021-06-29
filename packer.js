@@ -2,7 +2,7 @@ const fs = require("fs");
 const chalk = require("chalk");
 let data = "";
 
-const Pack = (arrayOfJsfiles, filenamedist) => {
+const Pack = (arrayOfJsfiles, folderofdist , filenamedist) => {
   for (const file of arrayOfJsfiles) {
     let fileread = fs.readFileSync(file);
     data += fileread + "\n";
@@ -14,7 +14,7 @@ const Pack = (arrayOfJsfiles, filenamedist) => {
   if (!fs.existsSync("./dist")) {
     fs.mkdirSync("dist");
   }
-  fs.writeFileSync(`dist/${filenamedist}`, data);
+  fs.writeFileSync(`${folderofdist}/${filenamedist}`, data);
 };
 
 module.exports = {
